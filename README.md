@@ -6,10 +6,10 @@
 
 ## 特性
 
-* 零配置，开箱即用
-* 支持 vue、nvue、uvue 三种文件
-* 支持 uni-app 和 uni-app-x 项目
-* 支持 组合式 和 选项式
+- 零配置，开箱即用
+- 支持 vue、nvue、uvue 三种文件
+- 支持 uni-app 和 uni-app-x 项目
+- 支持 组合式 和 选项式
 
 ## 安装
 

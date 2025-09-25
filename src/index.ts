@@ -34,7 +34,7 @@ export default function componentPlaceholderPlugin(): PluginOption {
     enforce: 'post',
     transform(code, id) {
       const platform = process.env.UNI_PLATFORM
-      if (!platform || platform.startsWith('mp-')) {
+      if (!platform || !platform.startsWith('mp-')) {
         return
       }
       if (!isAllowExtension(id)) {
