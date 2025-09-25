@@ -19,12 +19,6 @@
     "rootDir": "./src",
     "types": ["node", "vite"]
   },
-  "include": [
-    "src/index.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "examples"
-  ]
+  "include": ["src/index.ts"],
+  "exclude": ["node_modules", "dist", "examples"]
 }

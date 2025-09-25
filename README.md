@@ -40,7 +40,10 @@ export default defineConfig({
 #### 组合式文件
 
 ```vue
-<template>// xxxx</template>
+<template>
+  <view>test page</view>
+  <test></test>
+</template>
 
 <script setup>
 import test from './test.vue'
@@ -56,7 +59,10 @@ defineOptions({
 #### 选项式文件
 
 ```vue
-<template>// xxxx</template>
+<template>
+  <view>test page</view>
+  <test></test>
+</template>
 
 <script>
 import test from './test.vue'
