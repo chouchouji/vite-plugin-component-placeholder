@@ -4,6 +4,13 @@
 
 微信小程序支持 [跨分包自定义组件引用](https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/async.html)，但是 `uniapp` 只支持在 `pages.json` 下的页面中配置 `componentPlaceholder`， 并不支持在某个具体的组件中添加此配置，此插件旨在解决这个问题。
 
+## 特性
+
+* 零配置，开箱即用
+* 支持 vue、nvue、uvue 三种文件
+* 支持 uni-app 和 uni-app-x 项目
+* 支持 组合式 和 选项式
+
 ## 安装
 
 ```shell
