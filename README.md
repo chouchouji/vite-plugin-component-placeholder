@@ -1,4 +1,4 @@
-# @chouchouji/vite-plugin-component-placeholder
+# @binbinji/vite-plugin-component-placeholder
 
 ### 背景
 
@@ -8,24 +8,24 @@
 
 ```shell
 // npm
-npm i @chouchouji/vite-plugin-component-placeholder -D
+npm i @binbinji/vite-plugin-component-placeholder -D
 
 // yarn
-yarn add @chouchouji/vite-plugin-component-placeholder -D
+yarn add @binbinji/vite-plugin-component-placeholder -D
 
 // pnpm
-pnpm add @chouchouji/vite-plugin-component-placeholder -D
+pnpm add @binbinji/vite-plugin-component-placeholder -D
 ```
 
 ### 使用
 
-#### 1. 引入 `@chouchouji/vite-plugin-component-placeholder`
+#### 1. 引入 `@binbinji/vite-plugin-component-placeholder`
 
 ```javascript
 // vite.config.*
 import { defineConfig } from "vite";
 import uni from "@dcloudio/vite-plugin-uni";
-import componentPlaceholderPlugin from "@chouchouji/vite-plugin-component-placeholder";
+import componentPlaceholderPlugin from "@binbinji/vite-plugin-component-placeholder";
 
 // https://vitejs.dev/config/
 export default defineConfig({

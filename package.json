@@ -1,5 +1,5 @@
 {
-  "name": "@chouchouji/vite-plugin-component-placeholder",
+  "name": "@binbinji/vite-plugin-component-placeholder",
   "version": "0.0.1",
   "description": "A vite plugin to generate componentPlaceholder config for miniprogram",
   "type": "module",
@@ -29,7 +29,7 @@
     "uni-app",
     "uni-app-x"
   ],
-  "author": "chouchouji <1305974212@qq.com>",
+  "author": "binbinji <1305974212@qq.com>",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^24.3.0",
