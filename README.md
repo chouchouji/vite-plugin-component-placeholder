@@ -6,7 +6,7 @@
 
 ### 📦 安装
 
-```bash
+```shell
 // npm
 npm i @chouchouji/vite-plugin-component-placeholder -D
 
@@ -25,7 +25,7 @@ pnpm add @chouchouji/vite-plugin-component-placeholder -D
 // vite.config.*
 import { defineConfig } from "vite";
 import uni from "@dcloudio/vite-plugin-uni";
-import componentPlaceholderPlugin from "./plugin";
+import componentPlaceholderPlugin from "@chouchouji/vite-plugin-component-placeholder";
 
 // https://vitejs.dev/config/
 export default defineConfig({
