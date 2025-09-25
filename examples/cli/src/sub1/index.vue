@@ -8,11 +8,11 @@
 </template>
 
 <script setup>
-import test from "./test.vue";
+import test from './test.vue'
 
 defineOptions({
   componentPlaceholder: {
-    test: "view",
+    test: 'view',
   },
-});
+})
 </script>

@@ -1,10 +1,10 @@
 # @binbinji/vite-plugin-component-placeholder
 
-### 背景
+## 背景
 
 微信小程序支持 [跨分包自定义组件引用](https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/async.html)，但是 `uniapp` 只支持在 `pages.json` 下的页面中配置 `componentPlaceholder`， 并不支持在某个具体的组件中添加此配置，此插件旨在解决这个问题。
 
-### 📦 安装
+## 安装
 
 ```shell
 // npm
@@ -17,61 +17,58 @@ yarn add @binbinji/vite-plugin-component-placeholder -D
 pnpm add @binbinji/vite-plugin-component-placeholder -D
 ```
 
-### 使用
+## 使用
 
-#### 1. 引入 `@binbinji/vite-plugin-component-placeholder`
+### 1. 引入 `@binbinji/vite-plugin-component-placeholder`
 
 ```javascript
 // vite.config.*
-import { defineConfig } from "vite";
-import uni from "@dcloudio/vite-plugin-uni";
-import componentPlaceholderPlugin from "@binbinji/vite-plugin-component-placeholder";
+import componentPlaceholderPlugin from '@binbinji/vite-plugin-component-placeholder'
+import uni from '@dcloudio/vite-plugin-uni'
+import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [uni(), componentPlaceholderPlugin()],
-});
+})
 ```
 
-#### 2. 在 vue/nuve/uvue 文件中添加配置
-
-##### 组合式文件
+### 2. 在 vue/nuve/uvue 文件中添加配置
 
 在 `vue` 相关文件中添加 `componentPlaceholder` 配置
 
+#### 组合式文件
+
 ```vue
-<template>
-   // xxxx
-</template>
+<template>// xxxx</template>
 
 <script setup>
-import test from "./test.vue";
+import test from './test.vue'
 
 defineOptions({
   componentPlaceholder: {
-    test: "view"
+    test: 'view',
   },
-});
+})
 </script>
 ```
 
-##### 选项式文件
+#### 选项式文件
 
 ```vue
-<template>
-   // xxxx
-</template>
+<template>// xxxx</template>
 
 <script>
-    import test from "./test.vue"
-    export default {
-        componentPlaceholder: {
-            test: "view"
-        }
-    }
+import test from './test.vue'
+
+export default {
+  componentPlaceholder: {
+    test: 'view',
+  },
+}
 </script>
 ```
 
-### 许可证
+## 许可证
 
 [MIT](LICENSE)

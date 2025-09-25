@@ -7,11 +7,14 @@
 </template>
 
 <script setup lang="ts">
-const list = [{
-  name: 'top0',
-  value: 1
-},{
-  name: 'top1',
-  value: 2
-}] 
+const list = [
+  {
+    name: 'top0',
+    value: 1,
+  },
+  {
+    name: 'top1',
+    value: 2,
+  },
+]
 </script>

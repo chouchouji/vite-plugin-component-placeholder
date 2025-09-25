@@ -11,13 +11,13 @@
 <script setup lang="ts">
 function goToSub1() {
   uni.navigateTo({
-    url: '/sub1/index'
+    url: '/sub1/index',
   })
 }
 
 function goToSub2() {
   uni.navigateTo({
-    url: '/sub2/index'
+    url: '/sub2/index',
   })
 }
 </script>

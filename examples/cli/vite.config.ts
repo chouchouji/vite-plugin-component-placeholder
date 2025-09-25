@@ -1,8 +1,8 @@
-import { defineConfig } from "vite";
-import uni from "@dcloudio/vite-plugin-uni";
-import componentPlaceholderPlugin from "@binbinji/vite-plugin-component-placeholder";
+import componentPlaceholderPlugin from '../../dist/index'
+import uni from '@dcloudio/vite-plugin-uni'
+import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [uni(), componentPlaceholderPlugin()],
-});
+})

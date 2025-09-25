@@ -1,7 +1,8 @@
 export default {
-  entry: ["src/index.ts"],
+  entry: ['src/index.ts'],
   splitting: false,
   clean: true,
-  format: ["esm", "cjs"],
-  outDir: "dist",
-};
+  dts: true,
+  format: ['esm', 'cjs'],
+  outDir: 'dist',
+}
