@@ -19,6 +19,14 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chouchouji/vite-plugin-component-placeholder.git"
+  },
+  "homepage": "https://github.com/chouchouji/vite-plugin-component-placeholder",
+  "bugs": {
+    "url": "https://github.com/chouchouji/vite-plugin-component-placeholder/issues"
+  },
   "keywords": [
     "vite",
     "plugin",
