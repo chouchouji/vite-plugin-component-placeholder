@@ -14,10 +14,16 @@ function getComponentPlaceholderConfig(code: string) {
   const regex = /componentPlaceholder\s*:\s*({[^{}]*})/s
   const match = code.match(regex)
 
-  if (!match) return null
+  if (!match) {
+    return
+  }
 
   const result = match[1].replace(/(\w+)\s*:/g, '"$1":').replace(/'([^']*)'/g, '"$1"')
   return new Function('return ' + result)()
+}
+
+function isAllowExtension(path: string) {
+  return ['vue', 'nvue', 'uvue'].some((ext) => path.endsWith(ext))
 }
 
 export default function componentPlaceholderPlugin(): PluginOption {
@@ -27,11 +33,11 @@ export default function componentPlaceholderPlugin(): PluginOption {
     name: 'vite-plugin-component-placeholder',
     enforce: 'post',
     transform(code, id) {
-      const platfrom = process.env.UNI_PLATFORM
-      if (platfrom !== 'mp-weixin') {
+      const platform = process.env.UNI_PLATFORM
+      if (!platform || platform.startsWith('mp-')) {
         return
       }
-      if (!['vue', 'nvue', 'uvue'].some((ext) => id.endsWith(ext))) {
+      if (!isAllowExtension(id)) {
         return
       }
       const config = getComponentPlaceholderConfig(code)
