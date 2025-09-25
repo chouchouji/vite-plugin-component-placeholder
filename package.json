@@ -25,7 +25,9 @@
     "weixin",
     "miniprogram",
     "componentPlaceholder",
-    "subPackages"
+    "subPackages",
+    "uni-app",
+    "uni-app-x"
   ],
   "author": "chouchouji <1305974212@qq.com>",
   "license": "MIT",
