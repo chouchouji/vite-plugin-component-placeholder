@@ -1,6 +1,6 @@
 {
   "name": "@binbinji/vite-plugin-component-placeholder",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A vite plugin to generate componentPlaceholder config for miniprogram",
   "type": "module",
   "main": "dist/index.cjs",
