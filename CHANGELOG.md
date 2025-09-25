@@ -1,3 +1,12 @@
+## [0.0.5](https://github.com/chouchouji/vite-plugin-component-placeholder/compare/v0.0.4...v0.0.5) (2025-09-25)
+
+
+### Bug Fixes
+
+* improve component placeholder config handling and extension validation ([68922c1](https://github.com/chouchouji/vite-plugin-component-placeholder/commit/68922c174bb41ad04db14a7a28e321dfe739c015))
+
+
+
 ## [0.0.4](https://github.com/chouchouji/vite-plugin-component-placeholder/compare/v0.0.3...v0.0.4) (2025-09-25)
 
 
