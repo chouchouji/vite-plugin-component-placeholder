@@ -27,6 +27,10 @@ export default function componentPlaceholderPlugin(): PluginOption {
     name: 'vite-plugin-component-placeholder',
     enforce: 'post',
     transform(code, id) {
+      const platfrom = process.env.UNI_PLATFORM
+      if (platfrom !== 'mp-weixin') {
+        return
+      }
       if (!['vue', 'nvue', 'uvue'].some((ext) => id.endsWith(ext))) {
         return
       }
