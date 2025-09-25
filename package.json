@@ -21,7 +21,7 @@
     "url": "https://github.com/chouchouji/vite-plugin-component-placeholder.git"
   },
   "license": "MIT",
-  "author": "binbinji <1305974212@qq.com>",
+  "author": "chouchouji <1305974212@qq.com>",
   "type": "module",
   "exports": {
     ".": {
