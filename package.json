@@ -42,6 +42,7 @@
     "example:build": "cd examples/cli && pnpm build:mp-weixin",
     "example:dev": "cd examples/cli && pnpm dev:mp-weixin",
     "format": "prettier --write .",
+    "test": "vitest run",
     "release": "pnpm build && vr release"
   },
   "devDependencies": {
@@ -54,6 +55,7 @@
     "prettier-plugin-packagejson": "^2.5.19",
     "tsup": "^8.5.0",
     "typescript": "^5.9.2",
-    "vite": "^7.1.7"
+    "vite": "^7.1.7",
+    "vitest": "^3.2.4"
   }
 }

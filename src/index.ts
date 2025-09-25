@@ -2,24 +2,13 @@ import fs from 'fs'
 import path from 'path'
 import process from 'process'
 import type { PluginOption } from 'vite'
+import { getComponentPlaceholderConfig } from './utils.js'
 
 function getOutputJsonPath(filePath: string) {
   const relativePath = path.relative(process.env.UNI_INPUT_DIR!, filePath)
   const { name, dir } = path.parse(relativePath)
 
   return path.join(process.env.UNI_OUTPUT_DIR!, dir, name + '.json')
-}
-
-function getComponentPlaceholderConfig(code: string) {
-  const regex = /componentPlaceholder\s*:\s*({[^{}]*})/s
-  const match = code.match(regex)
-
-  if (!match) {
-    return
-  }
-
-  const result = match[1].replace(/(\w+)\s*:/g, '"$1":').replace(/'([^']*)'/g, '"$1"')
-  return new Function('return ' + result)()
 }
 
 function isAllowExtension(path: string) {
