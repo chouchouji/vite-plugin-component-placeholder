@@ -22,7 +22,7 @@ describe('getComponentPlaceholderConfig - Vue组件测试', () => {
       })
       </script>
     `
-    
+
     const result = getComponentPlaceholderConfig(vueCode)
     expect(result).toEqual({ button: 'view', image: 'div' })
   })
@@ -62,7 +62,7 @@ describe('getComponentPlaceholderConfig - Vue组件测试', () => {
       .container { padding: 20px; }
       </style>
     `
-    
+
     const result = getComponentPlaceholderConfig(vueCode)
     expect(result).toEqual({ 'rich-text': 'div', video: 'view' })
   })
@@ -78,7 +78,7 @@ describe('getComponentPlaceholderConfig - Vue组件测试', () => {
           }
           </script>
         `,
-        expected: { button: 'view', image: 'div' }
+        expected: { button: 'view', image: 'div' },
       },
       {
         code: `
@@ -88,7 +88,7 @@ describe('getComponentPlaceholderConfig - Vue组件测试', () => {
           }
           </script>
         `,
-        expected: { button: 'view', image: 'div' }
+        expected: { button: 'view', image: 'div' },
       },
       {
         code: `
@@ -98,8 +98,8 @@ describe('getComponentPlaceholderConfig - Vue组件测试', () => {
           }
           </script>
         `,
-        expected: { button: 'view', image: 'div' }
-      }
+        expected: { button: 'view', image: 'div' },
+      },
     ]
 
     testCases.forEach(({ code, expected }) => {
@@ -140,13 +140,13 @@ describe('getComponentPlaceholderConfig - Vue组件测试', () => {
       }
       </script>
     `
-    
+
     const result = getComponentPlaceholderConfig(uniappCode)
     expect(result).toEqual({
-      'swiper': 'div',
+      swiper: 'div',
       'swiper-item': 'div',
       'scroll-view': 'div',
-      'text': 'span'
+      text: 'span',
     })
   })
 
@@ -166,7 +166,7 @@ describe('getComponentPlaceholderConfig - Vue组件测试', () => {
       }
       </script>
     `
-    
+
     const result = getComponentPlaceholderConfig(vueCode)
     expect(result).toBeUndefined()
   })
@@ -186,7 +186,7 @@ describe('getComponentPlaceholderConfig - Vue组件测试', () => {
       const anotherConfig = { image: 'div' }
       </script>
     `
-    
+
     const result = getComponentPlaceholderConfig(vueCode)
     expect(result).toEqual({ button: 'view' })
   })
@@ -212,7 +212,7 @@ describe('getComponentPlaceholderConfig - Vue组件测试', () => {
       })
       </script>
     `
-    
+
     const result = getComponentPlaceholderConfig(vueCode)
     expect(result).toEqual({ button: 'view', input: 'div' })
   })
@@ -230,12 +230,12 @@ describe('getComponentPlaceholderConfig - Vue组件测试', () => {
       }
       </script>
     `
-    
+
     const result = getComponentPlaceholderConfig(vueCode)
     expect(result).toEqual({
       'v-button': 'button',
       'custom-element': 'div',
-      'Component': 'span'
+      Component: 'span',
     })
   })
 })

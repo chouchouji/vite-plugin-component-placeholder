@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import process from 'process'
+import { createFilter, type FilterPattern } from '@rollup/pluginutils'
 import type { PluginOption } from 'vite'
 import { getComponentPlaceholderConfig } from './utils.js'
 
@@ -11,11 +12,14 @@ function getOutputJsonPath(filePath: string) {
   return path.join(process.env.UNI_OUTPUT_DIR!, dir, name + '.json')
 }
 
-function isAllowExtension(path: string) {
-  return ['.vue', '.nvue', '.uvue'].some((ext) => path.endsWith(ext))
+export interface ComponentPlaceholderPluginOptions {
+  include?: FilterPattern
+  exclude?: FilterPattern
 }
 
-export default function componentPlaceholderPlugin(): PluginOption {
+export default function componentPlaceholderPlugin(
+  options: ComponentPlaceholderPluginOptions = { include: ['**/*.{vue,nvue,uvue}'], exclude: [] },
+): PluginOption {
   const map: Map<string, Record<string, string>> = new Map()
 
   return {
@@ -26,7 +30,7 @@ export default function componentPlaceholderPlugin(): PluginOption {
       if (!platform || !platform.startsWith('mp-')) {
         return
       }
-      if (!isAllowExtension(id)) {
+      if (!createFilter(options.include, options.exclude)(id)) {
         return
       }
       const config = getComponentPlaceholderConfig(fs.readFileSync(id, 'utf-8'))
