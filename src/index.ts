@@ -21,7 +21,7 @@ export default function componentPlaceholderPlugin(): PluginOption {
   return {
     name: 'vite-plugin-component-placeholder',
     enforce: 'post',
-    transform(code, id) {
+    transform(_, id) {
       const platform = process.env.UNI_PLATFORM
       if (!platform || !platform.startsWith('mp-')) {
         return
@@ -29,7 +29,7 @@ export default function componentPlaceholderPlugin(): PluginOption {
       if (!isAllowExtension(id)) {
         return
       }
-      const config = getComponentPlaceholderConfig(code)
+      const config = getComponentPlaceholderConfig(fs.readFileSync(id, 'utf-8'))
       if (config) {
         const outputPath = getOutputJsonPath(id)
         map.set(outputPath, config)
