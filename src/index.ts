@@ -12,7 +12,7 @@ function getOutputJsonPath(filePath: string) {
 }
 
 function isAllowExtension(path: string) {
-  return ['vue', 'nvue', 'uvue'].some((ext) => path.endsWith(ext))
+  return ['.vue', '.nvue', '.uvue'].some((ext) => path.endsWith(ext))
 }
 
 export default function componentPlaceholderPlugin(): PluginOption {
