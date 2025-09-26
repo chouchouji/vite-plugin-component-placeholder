@@ -75,6 +75,9 @@ defineOptions({
 import test from './test.vue'
 
 export default {
+  components: {
+    test,
+  },
   componentPlaceholder: {
     test: 'view',
   },
