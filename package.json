@@ -39,8 +39,8 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "example:build": "cd examples/cli && pnpm build:mp-weixin",
-    "example:dev": "cd examples/cli && pnpm dev:mp-weixin",
+    "example:build": "pnpm build && cd examples/cli && pnpm build:mp-weixin",
+    "example:dev": "pnpm build && cd examples/cli && pnpm dev:mp-weixin",
     "format": "prettier --write .",
     "test": "vitest run",
     "release": "pnpm build && vr release"
