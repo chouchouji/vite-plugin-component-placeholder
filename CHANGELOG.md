@@ -1,3 +1,12 @@
+## [0.0.8](https://github.com/chouchouji/vite-plugin-component-placeholder/compare/v0.0.7...v0.0.8) (2025-09-26)
+
+
+### Bug Fixes
+
+* read file content in transform function for correct config retrieval ([8de78e8](https://github.com/chouchouji/vite-plugin-component-placeholder/commit/8de78e80bf38c5a5a2f2857878c92099a1b7ee67))
+
+
+
 ## [0.0.7](https://github.com/chouchouji/vite-plugin-component-placeholder/compare/v0.0.6...v0.0.7) (2025-09-25)
 
 

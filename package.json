@@ -1,6 +1,6 @@
 {
   "name": "@binbinji/vite-plugin-component-placeholder",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A vite plugin to generate componentPlaceholder config for miniprogram",
   "keywords": [
     "vite",
