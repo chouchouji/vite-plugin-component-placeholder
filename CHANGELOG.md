@@ -1,3 +1,13 @@
+## [0.0.11](https://github.com/chouchouji/vite-plugin-component-placeholder/compare/v0.0.10...v0.0.11) (2025-09-26)
+
+
+### Code Refactoring
+
+* add check for existing output paths before reading file content ([f022f36](https://github.com/chouchouji/vite-plugin-component-placeholder/commit/f022f3617305f81313366e7212e0ff4bb58e71b9))
+* simplify platform check in transform function ([a42c1d8](https://github.com/chouchouji/vite-plugin-component-placeholder/commit/a42c1d8bb8d1b3dab50824e7a50f69a0681bf032))
+
+
+
 ## [0.0.10](https://github.com/chouchouji/vite-plugin-component-placeholder/compare/v0.0.9...v0.0.10) (2025-09-26)
 
 
