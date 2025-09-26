@@ -43,6 +43,9 @@ export default function componentPlaceholderPlugin(
         return
       }
       for (const [outputPath, config] of map) {
+        if(!fs.existsSync(outputPath)) {
+          continue
+        }
         const content = fs.readFileSync(outputPath, 'utf-8')
         const json = JSON.parse(content)
         json['componentPlaceholder'] = config
