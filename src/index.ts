@@ -21,13 +21,12 @@ export default function componentPlaceholderPlugin(
   options: ComponentPlaceholderPluginOptions = { include: ['**/*.{vue,nvue,uvue}'], exclude: [] },
 ): PluginOption {
   const map: Map<string, Record<string, string>> = new Map()
-
+  const isMiniprogram = process.env.UNI_PLATFORM?.startsWith('mp-')
   return {
     name: 'vite-plugin-component-placeholder',
     enforce: 'post',
     transform(_, id) {
-      const platform = process.env.UNI_PLATFORM
-      if (!platform || !platform.startsWith('mp-')) {
+      if (!isMiniprogram) {
         return
       }
       if (!createFilter(options.include, options.exclude)(id)) {
