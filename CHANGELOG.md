@@ -1,3 +1,12 @@
+## [0.0.10](https://github.com/chouchouji/vite-plugin-component-placeholder/compare/v0.0.9...v0.0.10) (2025-09-26)
+
+
+### Features
+
+* add support for include and exclude options ([5ba4cb3](https://github.com/chouchouji/vite-plugin-component-placeholder/commit/5ba4cb3828f501bc6800bab27d80c095aeb65997))
+
+
+
 ## [0.0.9](https://github.com/chouchouji/vite-plugin-component-placeholder/compare/v0.0.8...v0.0.9) (2025-09-26)
 
 
