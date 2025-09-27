@@ -40,7 +40,7 @@ export default defineConfig({
 })
 ```
 
-### 2. 在 vue/nuve/uvue 文件中添加配置
+### 2. 在 vue/nvue/uvue 文件中添加配置
 
 在 `vue` 相关文件中添加 `componentPlaceholder` 配置
 
