@@ -1,9 +1,9 @@
 import { describe, expect, test } from 'vitest'
-import { getComponentPlaceholderConfig } from '../src/utils.js'
+import { getComponentPlaceholderConfig } from '../src/utils'
 
-describe('getComponentPlaceholderConfig - Vue组件测试', () => {
+describe('getComponentPlaceholderConfig - Vue Component Tests', () => {
   // Vue 3 Composition API
-  test('应该从 Vue 3 Composition API 代码中提取配置', () => {
+  test('should extract config from Vue 3 Composition API code', () => {
     const vueCode = `
       <template>
         <view class="container">
@@ -28,7 +28,7 @@ describe('getComponentPlaceholderConfig - Vue组件测试', () => {
   })
 
   // Vue 3 Options API
-  test('应该从 Vue 3 Options API 代码中提取配置', () => {
+  test('should extract config from Vue 3 Options API code', () => {
     const vueCode = `
       <template>
         <div>
@@ -67,8 +67,8 @@ describe('getComponentPlaceholderConfig - Vue组件测试', () => {
     expect(result).toEqual({ 'rich-text': 'div', video: 'view' })
   })
 
-  // 单文件组件中的各种格式
-  test('应该处理 componentPlaceholder 的不同书写格式', () => {
+  // Various formats in single file components
+  test('should handle different componentPlaceholder formats', () => {
     const testCases = [
       {
         code: `
@@ -108,8 +108,8 @@ describe('getComponentPlaceholderConfig - Vue组件测试', () => {
     })
   })
 
-  // Uni-app 特定场景
-  test('应该处理 Uni-app 特有的组件映射', () => {
+  // Uni-app specific scenarios
+  test('should handle Uni-app specific component mappings', () => {
     const uniappCode = `
       <template>
         <view>
@@ -150,8 +150,8 @@ describe('getComponentPlaceholderConfig - Vue组件测试', () => {
     })
   })
 
-  // 边界情况 - 没有 componentPlaceholder
-  test('应该返回 undefined 当 Vue 组件中没有配置时', () => {
+  // Edge case - no componentPlaceholder
+  test('should return undefined when Vue component has no config', () => {
     const vueCode = `
       <template>
         <div>Hello World</div>
@@ -171,8 +171,8 @@ describe('getComponentPlaceholderConfig - Vue组件测试', () => {
     expect(result).toBeUndefined()
   })
 
-  // 多脚本块的情况
-  test('应该处理多个 script 块的情况', () => {
+  // Multiple script blocks
+  test('should handle multiple script blocks', () => {
     const vueCode = `
       <script>
       // 第一个脚本块
@@ -191,8 +191,8 @@ describe('getComponentPlaceholderConfig - Vue组件测试', () => {
     expect(result).toEqual({ button: 'view' })
   })
 
-  // TypeScript Vue 组件
-  test('应该处理 TypeScript Vue 组件', () => {
+  // TypeScript Vue components
+  test('should handle TypeScript Vue components', () => {
     const vueCode = `
       <template>
         <div>{{ message }}</div>
@@ -217,8 +217,8 @@ describe('getComponentPlaceholderConfig - Vue组件测试', () => {
     expect(result).toEqual({ button: 'view', input: 'div' })
   })
 
-  // 复杂的选择器名称
-  test('应该处理包含特殊字符的组件名', () => {
+  // Complex selector names
+  test('should handle component names with special characters', () => {
     const vueCode = `
       <script>
       export default {
