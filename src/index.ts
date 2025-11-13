@@ -43,7 +43,7 @@ export default function componentPlaceholderPlugin(
         return
       }
       for (const [outputPath, config] of map) {
-        if(!fs.existsSync(outputPath)) {
+        if (!fs.existsSync(outputPath)) {
           continue
         }
         const content = fs.readFileSync(outputPath, 'utf-8')

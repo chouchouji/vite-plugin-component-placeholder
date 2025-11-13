@@ -10,6 +10,7 @@
 - 支持 vue、nvue、uvue 三种文件
 - 支持 uni-app 和 uni-app-x 项目
 - 支持 组合式 和 选项式 两种写法
+- 支持 cli 项目和 hx 项目
 
 ## 安装
 
@@ -26,7 +27,7 @@ pnpm add @binbinji/vite-plugin-component-placeholder -D
 
 ## 使用
 
-### 1. 引入 `@binbinji/vite-plugin-component-placeholder`
+### 1. 引入插件 `@binbinji/vite-plugin-component-placeholder`
 
 ```javascript
 // vite.config.*
