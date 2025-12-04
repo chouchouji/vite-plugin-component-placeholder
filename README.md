@@ -43,6 +43,9 @@ export default defineConfig({
 
 ### 2. 在 vue/nvue/uvue 文件中添加配置
 
+> [!TIP]
+> 注意配置的 `key` 需要转换成 `kebab-case` 风格，比如你的组件名为 `TestComp`，配置应该写 `test-comp`
+
 在 `vue` 相关文件中添加 `componentPlaceholder` 配置
 
 #### 组合式文件
@@ -57,9 +60,11 @@ export default defineConfig({
 import test from './test.vue'
 
 defineOptions({
+  // ifdef MP
   componentPlaceholder: {
     test: 'view',
-  },
+  } 
+  // endif 
 })
 </script>
 ```
@@ -79,9 +84,11 @@ export default {
   components: {
     test,
   },
+  // ifdef MP
   componentPlaceholder: {
     test: 'view',
-  },
+  }
+  // endif 
 }
 </script>
 ```
